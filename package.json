@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:action": "tsc --project tsconfig.action.json && cp -r utils dist/ && cp package.json dist/",
+    "build:action": "tsc --project tsconfig.action.json && cp -r utils dist/ && node build-action-package.cjs",
     "test:action": "npm run build:action && node test-action-build.js",
     "start": "next start",
     "lint": "next lint",
